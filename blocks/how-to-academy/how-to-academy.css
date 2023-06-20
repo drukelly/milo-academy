@@ -1,0 +1,41 @@
+.how-to-academy {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "heading image ."
+    "list list ."
+    ". . .";
+  gap: 10px 10px;
+  margin: 4em auto;
+  max-width: 1200px;
+}
+
+.how-to-academy ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.how-to-academy ol li {
+  padding: 2em 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.how-to-academy ol li:first-child {
+  border-top: 1px solid #ccc;
+}
+
+.how-to-academy div:first-child > div:first-child {
+  grid-area: heading;
+}
+
+.how-to-academy div:first-child > div:nth-child(2) {
+  /* border: 1px solid red; */
+  grid-area: image;
+}
+
+.how-to-academy div:last-child {
+  grid-area: list;
+}
